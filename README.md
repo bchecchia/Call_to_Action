@@ -11,7 +11,7 @@
 * Being creative and with no specific requirements for features to address this problem space.  
 * Demonstrating what has been learned up to this point. We are also free to incorporate other technologies and platforms that we have not yet uncovered....
 
-## First Screen Shots  
+## Screen Shots  
   
 <img src= "./FAFSA_dash.png" width=400>
  

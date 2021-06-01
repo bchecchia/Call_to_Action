@@ -41,55 +41,55 @@
             
              <div class="form-style-10">
               <h1>Log in to the FAFSA<span>Sign up and Complete the Form!</span></h1>
-              <form id="myForm"  action="/action_page.php">
+              <form id="myForm">
 
                   <div class="section"><span>1</span>Name & SSN</div>
                   <div class="inner-wrap">
-                      <label>First Name <input type="text" name="field1" /></label>
-                      <label>Middle initial <input type="text" name="field1" /></label>
-                      <label>Last Name <input type="text" name="field1" /></label>
-                      <label>SSN <input type="text" name="field1" /></label>
-                      <label>DOB<input type="text" name="field1" /></label>
+                      <label>First Name <input type="text" name="firstName" /></label>
+                      <label>Middle initial <input type="text" name="middleInitial" /></label>
+                      <label>Last Name <input type="text" name="lastName" /></label>
+                      <label>SSN <input type="text" name="ssn" /></label>
+                      <label>DOB<input type="text" name="dateOfBirth" /></label>
                       
                   </div>
 
                   <div class="section"><span>2</span>Mailing Address</div>
                       <div class="inner-wrap">
-                        <label>Street<input type="text" name="field1" /></label>
-                        <label>City <input type="text" name="field1" /></label>
-                        <label>State <input type="text" name="field1" /></label>
-                        <label>ZIP<input type="text" name="field1" /></label>
+                        <label>Street<input type="text" name="street" /></label>
+                        <label>City <input type="text" name="city" /></label>
+                        <label>State <input type="text" name="state" /></label>
+                        <label>ZIP<input type="text" name="zipcode" /></label>
                   </div>
               
                   <div class="section"><span>3</span>Email & Phone</div>
                   <div class="inner-wrap">
-                      <label>Email Address <input type="email" name="field3" /></label>
-                      <label>Mobile Number <input type="text" name="field4" /></label>
+                      <label>Email Address <input type="email" name="email" /></label>
+                      <label>Mobile Number <input type="text" name="phoneNumber" /></label>
                   </div>
               
 
 
                   <div class="section"><span>4</span>Residence status</div>
                       <div class="inner-wrap">
-                      <label>State lived in for past 5 years <input type="password" name="field5" /></label>
-                      <label>When did you become a resident <input type="password" name="field6" /></label>
-                      <label>Are you a citizen?<input type="password" name="field6" /></label>
+                      <label>State lived in for past 5 years <input type="text" name="state" /></label>
+                      <label>When did you become a resident <input type="text" name="residentDate" /></label>
+                      <label>Are you a citizen?<input type="text" name="isCitizen" /></label>
                   </div>
 
                   <div class="section"><span>5</span>School Details</div>
                       <div class="inner-wrap">
-                      <label>High School Completion Status <input type="password" name="field5" /></label>
-                      <label>What degree or certification working on <input type="password" name="field6" /></label>
-                      <label>What this be your first degree <input type="password" name="field6" /></label>
-                      <label>College grade level<input type="password" name="field6" /></label>
-                      <label>Interested in work study<input type="password" name="field6" /></label>
+                      <label>High School Completion Status <input type="text" name="hsStatus" /></label>
+                      <label>What degree or certification working on <input type="text" name="degreeStatus" /></label>
+                      <label>What this be your first degree <input type="text" name="firstDegree" /></label>
+                      <label>College grade level<input type="text" name="collegeGrade" /></label>
+                      <label>Interested in work study<input type="text" name="workStudy" /></label>
                   </div>
 
                   <div class="button-section">
-                   <input type="submit" name="Sign Up" />
-                   <input type="button" onclick="myFunction()" value="Reset form">
+                   <input type="submit" name="submit" onclick="sendApplication()"/>
+                   <input type="button" onclick="clearForm()" value="Reset form">
                    <span class="privacy-policy">
-                   <input type="checkbox" name="field7">You agree to our Terms and Policy. 
+                   <input type="checkbox" name="agreeToPolicy" required>You agree to our Terms and Policy. 
                    </span>
                   </div>
               </form>

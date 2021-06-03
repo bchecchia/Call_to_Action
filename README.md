@@ -13,7 +13,7 @@
 
 ## Screen Shots  
   
-<img src= "./FAFSA_dash2.png" width=400>
+<img src= "./FAFSA_dash3.png" width=400>
  
 ## Installation
 

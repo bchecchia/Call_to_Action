@@ -1,12 +1,14 @@
-body {
-    margin: 0;
-    padding: 0;
-    color: #fff;
-    font-family: 'Open Sans', Helvetica, sans-serif;
+  body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Droid Serif', times new roman, times, serif;
     box-sizing: border-box;
-  }
-  
+    text-align:center;
+    width: 100%;
+    background-color: #e6e6fae8;
+    }
 
+    
   .grid-container {
     width: 75%;
     margin: 0 auto;
@@ -18,7 +20,7 @@ body {
     border-radius: 15px;
   }
   
-  /* Give every child element its grid name */
+
   .header {
     /* grid-area: header; */
     align-items: center;
@@ -28,7 +30,7 @@ body {
     
   }
 
-.navbar-nav.navbar-center {
+  .navbar-nav.navbar-center {
     position: relative;
     left: 50%;
     transform: translatex(-50%);
@@ -36,9 +38,11 @@ body {
 
   .main {
     grid-area: main;
-    background-color: #908f8f;
-    border: solid 2px black;
+    background-color:#5c7385;
+    border-color:#5c7385;
+    border: solid 2px;
     border-radius: 25px;
+    padding: 10px;
     
   }
   
@@ -49,7 +53,7 @@ body {
     padding: 20px;
     height: 150px;
     background-color: #e3e4e6;
-    color: slategray;
+    color: #5c7385;
     border: solid 1px black;
     border-radius: 25px;
     font-size: 1.875em;
@@ -115,6 +119,8 @@ body {
     justify-content: space-between;
     padding: 0 16px;
     background-color: #1e2224;
+    height: 50px;
+    margin-top: 150px;
   }
   
   /* Medium screens breakpoint (1050px) */
@@ -246,3 +252,54 @@ body {
     margin-top: 10px;
     text-align: right;
   }
+
+  /* Login form css */
+
+     
+    input[type=text], input[type=password]{
+    width:20%;
+    padding:7px 10px;
+    margin: 10px 0;
+    display:inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    }
+     
+    button{
+    background-color:#2A88AD;
+    width: 10%;
+    padding: 9px 5px;
+    margin:10px 0px 0px 35px;
+    cursor:pointer;
+    border:none;
+    color:#ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    }
+     
+    button:hover{
+    opacity:0.8;
+    }
+     
+    #un,#ps{
+    font-family:'Lato', sans-serif;
+    color: rgb(5, 5, 5);
+    }
+ 
+ 
+    #container{
+        position: absolute;
+        top:0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width:600;
+        height: 300px;
+        text-align: center;
+    }
+     
+    /* Login form css */
+
+
+    

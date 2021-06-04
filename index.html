@@ -6,9 +6,8 @@
         <title>Da_FAFSA_Dash</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
         <script src="./script.js"></script>
         <link rel="stylesheet" href="./main.css">
       
@@ -19,8 +18,10 @@
         <div class="header__avatar">Your FAFSA_ID</div>
         <div class="header__avatar">Your FAFSA_ID</div>
         <div class="header__avatar">Your FAFSA_ID</div> -->
-     
-      <div class="container-fluid row"><div class="col-sm-6"><a href="javaScript:void(0)" id="skipLink"><span>skip to main content</span></a><span id="logo" tabindex="-1"><!----><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="fsaLogo" role="img" aria-labelledby="fsa-logo-title fsa-logo-description" x="0px" y="0px" viewBox="0 0 440 37" focusable="false" style="enable-background:new 0 0 440 37;" xml:space="preserve">
+     </header>
+      <div class="container-fluid row"><div class="col-sm-6">
+        <!--<a href="javaScript:void(0)" id="skipLink"><span>skip to main content</span></a><span id="logo" tabindex="-1">-->
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="fsaLogo" role="img" aria-labelledby="fsa-logo-title fsa-logo-description" x="0px" y="0px" viewBox="0 0 440 37" focusable="false" style="enable-background:new 0 0 440 37;" xml:space="preserve">
         <style type="text/css">
           .st0{fill:#58595B;}
           .st1{fill:#77787B;}
@@ -38,18 +39,62 @@
         <path class="st2" d="M395.8,16.6c0.3-0.2,1-0.2,1.9-0.1h0.1v-2.6c-0.1,0-0.4,0-0.7,0s-0.5,0-0.7,0c-1,0-1.9,0.4-2.7,1  c-0.2-0.2-0.7-0.4-1.2-0.6s-1.1-0.3-1.7-0.3c-1.2,0-2.3,0.2-3.2,0.7s-1.7,1.1-2.3,1.9s-0.8,1.8-0.8,2.8s0.2,1.9,0.6,2.8  s0.9,1.5,1.4,1.7c-1.5,0.7-2.3,1.6-2.3,2.9c0,0.6,0.2,1.1,0.6,1.5s0.9,0.7,1.5,0.8c-1.9,0.7-2.8,1.7-2.8,3c0,1.5,0.7,2.5,2.1,3.2  c1.3,0.7,2.9,1,4.9,1c4.8,0,7.2-1.4,7.2-4.2c0-1.2-0.5-2.3-1.5-3.2c-0.5-0.4-1.5-0.8-3.2-1.2c-0.3-0.1-0.6-0.1-1-0.2  s-0.6-0.1-0.8-0.1s-0.4,0-0.7,0s-0.5,0-0.5,0s-0.2,0-0.5-0.1c-1.5-0.2-2.2-0.5-2.2-1c0-0.3,0.2-0.7,0.7-1c0.2-0.2,0.4-0.3,0.5-0.4  c0.5,0.2,1.1,0.3,1.9,0.3s1.6-0.1,2.3-0.4s1.4-0.7,1.9-1.2s0.9-1.1,1.2-1.8s0.4-1.4,0.4-2s-0.1-1.2-0.2-1.8  c-0.1-0.2-0.1-0.4-0.2-0.7s-0.2-0.5-0.2-0.5S395.7,16.7,395.8,16.6z M389,29.8c0.1,0,0.4,0.1,0.9,0.1s0.9,0.1,1.4,0.2s1,0.2,1.5,0.3  s0.9,0.3,1.3,0.6s0.5,0.6,0.5,1c0,0.4-0.2,0.7-0.5,1c-0.1,0.1-0.3,0.2-0.6,0.3s-0.5,0.1-0.7,0.2s-0.5,0.1-0.8,0.1s-0.6,0-0.8,0  s-0.5,0-1,0s-0.9,0-1.3,0c-0.3,0-0.5,0-0.7-0.1s-0.4-0.1-0.6-0.2s-0.4-0.2-0.5-0.3s-0.2-0.2-0.3-0.4s-0.1-0.4-0.1-0.6  c0-0.2,0-0.4,0.1-0.7s0.2-0.4,0.4-0.6S388,30.2,389,29.8z M393.1,20.6c-0.4,1.4-1.2,2.1-2.5,2.1c-1,0-1.7-0.3-2.2-0.8  s-0.8-1.3-0.8-2.3s0.3-1.7,0.8-2.2s1.3-0.8,2.2-0.8s1.6,0.3,2,1c0.2,0.3,0.3,0.6,0.4,1s0.1,0.7,0.1,1S393.2,20.2,393.1,20.6z"></path>
         <path class="st2" d="M409.4,14.9c-1-0.7-2.1-1-3.4-1c-2,0-3.5,0.7-4.7,2.2c-1.1,1.4-1.7,3.4-1.7,5.8c0,1.9,0.3,3.5,0.9,4.8  c0.3,0.7,0.7,1.3,1.2,1.7c0.5,0.5,1.1,0.8,1.8,1.1c0.7,0.3,1.5,0.4,2.5,0.4c0.9,0,1.7-0.1,2.4-0.4c2.6-0.9,3.9-3.5,3.9-7.6  C412.3,18.6,411.3,16.3,409.4,14.9z M406,27.3c-1,0-1.7-0.4-2.2-1.2c-0.2-0.4-0.4-0.8-0.6-1.2s-0.3-1-0.3-1.4s-0.1-1-0.1-1.6  s0-1.2,0.1-1.7c0.3-2.4,1.3-3.6,3.1-3.6c1,0,1.7,0.3,2.2,1c0.6,0.8,0.9,2.3,0.9,4.4C409.2,25.5,408.1,27.3,406,27.3z"></path>
         <polygon class="st2" points="413.9,14.2 417.2,14.2 420.3,25.1 423.6,14.2 426.9,14.2 422.2,29.6 418.5,29.6 "></polygon>
-        </svg><!----></span></div><div class="col-sm-6 search-container"><cmn-search class="searchBar" _nghost-c3=""><div _ngcontent-c3="" class="form-group has-feedback has-feedback-left" id="titleSearch"><div _ngcontent-c3=""><a _ngcontent-c3="" href="javaScipt:undefined;"><span _ngcontent-c3="">Search FAFSA Help</span></a></div></div></cmn-search></div><div class="navbar-header"><!----></div></div>
+        </svg><!----></span></div><div class="col-sm-6 search-container"><cmn-search class="searchBar" _nghost-c3=""><div _ngcontent-c3="" class="form-group has-feedback has-feedback-left" id="titleSearch"><div _ngcontent-c3="">
+          <a _ngcontent-c3="" href="https://studentaid.gov/apply-for-aid/fafsa/filling-out/help"><span _ngcontent-c3="">Search FAFSA Help</span></a>
+        </div></div></cmn-search></div><div class="navbar-header"><!----></div></div>
 
 
-      <nav class="navbar navbar-inverse">
-        <div class="container-fluid"> 
+        <header class="header">
+
+
+     
+          <!-- <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+              
+                <ul class="nav navbar-nav navbar-center">
+                <li><a href="index.html">Dash</a></li>
+                <li><a href="form.html">Form</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="#">Page 3</a></li>
+              </ul>
+            
+            </div>
+          </nav> -->
+    
+          <!-- <div class="container"> -->
+            </header>
+            
+            <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-1 mb-5 border-bottom bg-dark">
+              <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-light text-decoration-none">
+                <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+              </a>
+        
+              <ul class="nav col-12 col-md-auto mb-4 justify-content-center mb-md-0">
+                <li><a href="index.html" class="nav-link px-4 link-light">Dash</a></li>
+                <li><a href="form.html" class="nav-link px-4 link-light">Form</a></li>
+                <li><a href="login.html" class="nav-link px-4 link-light">Login</a></li>
+                <!-- <li><a href="#" class="nav-link px-4 link-light">FAQs</a></li>
+                <li><a href="#" class="nav-link px-4 link-light">About</a></li> -->
+              </ul>
+        
+              <div class="col-md-3 text-end">
+                <!-- <button type="button" class="btn btn-outline-primary me-2">Login</button>
+                <button type="button" class="btn btn-primary">Sign-up</button> -->
+              </div>
+            </header>
+          <!-- </div> -->
+    
+        </header>
+
+      <!-- <nav class="navbar navbar-inverse">
+        <div class="container-fluid">  -->
 
 
         <!-- <div class="navbar-header">
             <a class="navbar-brand" href="#">WebSiteName</a>
           </div>  -->
           
-            <ul class="nav navbar-nav navbar-center">
+            <!-- <ul class="nav navbar-nav navbar-center">
             <li><a href="index.html">Dash</a></li>
             <li><a href="form.html">Form</a></li>
             <li><a href="login.html">Login</a></li>
@@ -59,9 +104,10 @@
         </div>
       </nav> 
 
-        <div class="navbar-header"><!----><button class="navbar-toggle collapsed ng-star-inserted" type="button" aria-expanded="false"><!----><span class="navbar-toggle-txt ng-star-inserted"><span>Menu</span><span class="glyphicon glyphicon-chevron-down"></span></span><!----></button></div>
-    </header>
+        <div class="navbar-header"><button class="navbar-toggle collapsed ng-star-inserted" type="button" aria-expanded="false"><span class="navbar-toggle-txt ng-star-inserted"><span>Menu</span><span class="glyphicon glyphicon-chevron-down"></span></span></button></div>
+  </header> --> 
       
+
 
       <div class="grid-container">
            <main class="main">
@@ -69,13 +115,27 @@
                <div class="main-header__heading">Hello Student</div>
                <div class="main-header__updates">Recent Submission</div>
              </div>
+
+             <div class="container">
+              <progress>    </progress>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+
+                </div> 
+              </div>
+            
+
              <div style = padding:30px;>
-              <div class="progress" style="height: 40px;">
+              <div class="progress" style="height: 40px;"></div>
               <div class="progress-bar bg-success" role="progressbar" style="width: 35%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              <a href="#" class="btn btn-primary" data-progress="25">task-1</a>
+              <a href="#" class="btn btn-primary" data-progress="50">task-2</a>
+              <a href="#" class="btn btn-primary" data-progress="75">task-3</a>
+              <a href="#" class="btn btn-primary" data-progress="100">task-4</a>
             </div>
-          </div>
+      
          
-             <!-- <div class="main-overview">
+             <div class="main-overview">
                <div class="overviewcard">
                  <div class="overviewcard__icon">Issue</div>
                  <div class="overviewcard__info">Action</div>
@@ -89,23 +149,30 @@
                  <div class="overviewcard__info">Action</div>
               </div>
             </div>
-          -->
+         
              <div class="main-cards">
                <div class="card">In Progress</div>
                <div class="card">In review</div>
                <div class="card">Pending Action</div>
              </div>
+             
            </main>
          </div>
 
-          <footer class="footer">
+         <footer class="footer mt-auto py-3 bg-dark">
+          <div class="container">
+            <span class="text-muted">© 2021 fake_FAFSA:</span>
+          </div>
+        </footer>
+        
+          <!-- <footer class="footer">
             <footer class="bg-light text-center text-lg-start">
               <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
                 © 2021 fake_FAFSA:
-                <a class="text-dark" href="https://mdbootstrap.com/">Made with love by pure genius</a>
+                <a class="text-dark"></a>
               </div>
             </footer>
-          </footer>
+          </footer> -->
 
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

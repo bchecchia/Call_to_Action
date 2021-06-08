@@ -302,4 +302,8 @@
     /* Login form css */
 
 
-    
+    table 
+    {
+        table-layout:fixed;
+        width:100%;
+    }

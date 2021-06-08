@@ -47,7 +47,7 @@ async function getApplication(email) {
        return 
      } else {
         console.log(resp[0])
-        updateTables(resp[0].status)
+        updateTables(resp[0])
      }
     })
   });
@@ -57,23 +57,27 @@ function populateApplication() {
   getApplication(sessionStorage.getItem("email"))
 }
 
-function updateTables(status) {
-  let progressDiv = document.getElementById("in-progress")
+function updateTables(resp) {
+  let progressDiv = document.getElementById("in-details")
   let reviewDiv = document.getElementById("in-review")
   let pendivDiv = document.getElementById("in-pending")
+
+  let status = resp.status
+  let submitted = resp.submitted
+  let updated = resp.updated
   
   if (status == "SUBMITTED") {
-    progressDiv.appendChild(document.createElement("div")).innerHTML = "PENDING"
-    reviewDiv.appendChild(document.createElement("div")).innerHTML = ""
-    pendivDiv.appendChild(document.createElement("div")).innerHTML = ""
+    progressDiv.appendChild(document.createElement("div")).innerHTML = `<p style="font-size: 15px; color: green">Submitted on ${submitted}</p>`
+    reviewDiv.appendChild(document.createElement("div")).innerHTML = "N/A"
+    pendivDiv.appendChild(document.createElement("div")).innerHTML = "N/A"
 
-  } else if (status == "ACCEPTED") {
-    progressDiv.appendChild(document.createElement("div")).innerHTML = "OK"
-    reviewDiv.appendChild(document.createElement("div")).innerHTML = "PENDING"
-    pendivDiv.appendChild(document.createElement("div")).innerHTML = ""
   } else if (status == "REVIEW") {
-    progressDiv.appendChild(document.createElement("div")).innerHTML = "OK"
-    reviewDiv.appendChild(document.createElement("div")).innerHTML = "OK"
-    pendivDiv.appendChild(document.createElement("div")).innerHTML = "More Information Required"
-  }
+    progressDiv.appendChild(document.createElement("div")).innerHTML = `<p style="font-size: 15px; color: green">Submitted on ${submitted}</p>`
+    reviewDiv.appendChild(document.createElement("div")).innerHTML = `<p style="font-size: 15px; color: green">In Progress - Last Update: ${updated}</p>`
+    pendivDiv.appendChild(document.createElement("div")).innerHTML = "N/A"
+  } else if (status == "MORE_INFO") {
+    progressDiv.appendChild(document.createElement("div")).innerHTML = `<p style="font-size: 15px; color: green">Submitted on ${submitted}</p>`
+    reviewDiv.appendChild(document.createElement("div")).innerHTML = `<p style="font-size: 15px; color: yellow">Hold - Last Update: ${updated}</p>`
+    pendivDiv.appendChild(document.createElement("div")).innerHTML = `<p style="font-size: 15px; color: red">More Information Required</p>`
+  } 
 }

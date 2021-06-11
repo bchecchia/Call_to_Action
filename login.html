@@ -12,7 +12,14 @@
       
     </head>
   <body>
-   
+    <script>
+      function login() {
+        let email = document.getElementById("uname").value
+        console.log(email)
+        sessionStorage.setItem("email", email)
+        location.href = "/index.html";
+      }
+    </script>
     <header class="header">
     <div class="container-fluid row">
       <div class="col-sm-6">
@@ -74,24 +81,22 @@
         </nav>
         </header>
 
-    <form action="login" method="post" id="flogin">
+
  
     <div class = grid-container>
         <main class ="main">
             <div class="border-box">
                 <h2 style = "color: white;" >Please Login</h2>
-                <label for="uname" id="un">Username:</label>
-                <input type="text" name="user" placeholder="Enter Username" id="uname"><br/>
+                <label for="uname" id="un">Email:</label>
+                <input type="text" name="user" placeholder="Enter Email" id="uname"><br/>
                 
                 <label for="upass" id="ps">Password:</label>
                 <input type="password" name="pass" placeholder="Enter Password" id="upass"><br/>
                 
-                <button type="submit" value="Login"  id="submit" onClick="alert('Login Successfully')">Login</button>
+                <button type="submit" value="Login"  id="submit" onClick="login()">Login</button>
                 
                 
             </div>
-            
-    </form>
         </main>
     </div>
 

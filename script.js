@@ -30,43 +30,48 @@ async function sendApplication() {
   clearForm()
 }
 
-
-class ProgressBar {
-  constructor(progressbar, targets){
-    this.progressBar = progressbar;    // Progress Bar
-    this.targets = targets;            // Step Complete Btns
-    this.progress = 0;                 // Tracking Progress
-  }
-}
-
-// Add this below the constructor function.
- 
-init(); {
-  const context = this;   // Reference to the instantiated object.
-  this.targets.forEach(function(target){
-    // Loop through each target element and add a click 
-    // event to listen for which will call the 
-    // changeProgress method and update the progress bar
-    target.addEventListener('click', function(e){
-      context.changeProgress(e);
-      // Passing the built event object (e) to our method
-    });
+async function getApplication(email) {
+  let headers = new Headers()
+  headers.append("Content-Type", "application/json")
+  fetch("http://localhost:8080/api/application?email=" + email, {
+    method: "GET",
+    headers: headers
+  }).then(function(response) {
+    response.json().then(function(resp) {
+     if (resp.length == 0) {
+       document.body.innerHTML = "No applications submitted for this user, please submit an application."
+       return
+     }
+     if (resp.length > 1) {
+       alert("Error! Multiple applications match same email address")
+       return 
+     } else {
+        console.log(resp[0])
+        updateTables(resp[0])
+     }
+    })
   });
+};
+
+function populateApplication() {
+  getApplication(sessionStorage.getItem("email"))
 }
 
-changeProgress(e); {
-  this.progress = e.target.getAttribute('data-progress');
-  this.progressBar.style.width = this.progress + '%';
-  this.progressBar.setAttribute('aria-valuenow', this.progress);
-}
+function updateTables(resp) {
+  let progressDiv = document.getElementById("in-details")
+  let reviewDiv = document.getElementById("in-review")
+  let pendivDiv = document.getElementById("in-pending")
 
-const progressBar = new ProgressBar(
-  // passing in reference to progress-bar div
-  document.querySelector('.progress-bar'),
-  // passing in an array of all the steps (targets) to listen on
-  document.querySelectorAll('.btn-primary')
-);
-progressBar.init();
+  let status = resp.status
+  let submitted = resp.submitted
+  let updated = resp.updated
+  
+  if (status == "SUBMITTED") {
+    progressDiv.appendChild(document.createElement("div")).innerHTML = `<p style="font-size: 15px; color: green">Submitted on ${submitted}</p>`
+    reviewDiv.appendChild(document.createElement("div")).innerHTML = "N/A"
+    pendivDiv.appendChild(document.createElement("div")).innerHTML = "N/A"
+
+
 
 
 //array of news
@@ -89,3 +94,15 @@ for(let i=0; i<news.length; i++){
 }
 
 document.querySelector("#scroll").innerHTML = tickerText;
+=======
+  } else if (status == "REVIEW") {
+    progressDiv.appendChild(document.createElement("div")).innerHTML = `<p style="font-size: 15px; color: green">Submitted on ${submitted}</p>`
+    reviewDiv.appendChild(document.createElement("div")).innerHTML = `<p style="font-size: 15px; color: green">In Progress - Last Update: ${updated}</p>`
+    pendivDiv.appendChild(document.createElement("div")).innerHTML = "N/A"
+  } else if (status == "MORE_INFO") {
+    progressDiv.appendChild(document.createElement("div")).innerHTML = `<p style="font-size: 15px; color: green">Submitted on ${submitted}</p>`
+    reviewDiv.appendChild(document.createElement("div")).innerHTML = `<p style="font-size: 15px; color: yellow">Hold - Last Update: ${updated}</p>`
+    pendivDiv.appendChild(document.createElement("div")).innerHTML = `<p style="font-size: 15px; color: red">More Information Required</p>`
+  } 
+}
+

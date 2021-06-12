@@ -94,7 +94,7 @@ for(let i=0; i<news.length; i++){
 }
 
 document.querySelector("#scroll").innerHTML = tickerText;
-=======
+
   } else if (status == "REVIEW") {
     progressDiv.appendChild(document.createElement("div")).innerHTML = `<p style="font-size: 15px; color: green">Submitted on ${submitted}</p>`
     reviewDiv.appendChild(document.createElement("div")).innerHTML = `<p style="font-size: 15px; color: green">In Progress - Last Update: ${updated}</p>`
@@ -106,3 +106,11 @@ document.querySelector("#scroll").innerHTML = tickerText;
   } 
 }
 
+var popover = new bootstrap.Popover(document.querySelector('.example-popover'), {
+  container: 'body'
+})
+
+var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+  return new bootstrap.Popover(popoverTriggerEl)
+})

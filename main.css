@@ -58,9 +58,10 @@
   .main-overview {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
-    grid-auto-rows: 90px;
     grid-gap: 20px;
     margin: 5px;
+    height: auto;
+    margin: auto;
   }
   
   .overviewcard {
@@ -68,7 +69,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 5px;
-    background-color: rgba(214, 184, 214, 0.2);
+    background-color: yellow;
     border: solid 1px black;
     border-radius: 15px 50px; 
     font-size: 1.875em;
@@ -311,6 +312,5 @@
 
     table 
     {
-        table-layout:fixed;
         width:100%;
     }

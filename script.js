@@ -129,7 +129,7 @@ function generateNews() {
 
 document.querySelector("#scroll").innerHTML = tickerText;
 
-  } else if (status == "REVIEW") {
+  } if (status == "REVIEW") {
     progressDiv.appendChild(document.createElement("div")).innerHTML = `<p style="font-size: 15px; color: green">Submitted on ${submitted}</p>`
     reviewDiv.appendChild(document.createElement("div")).innerHTML = `<p style="font-size: 15px; color: green">In Progress - Last Update: ${updated}</p>`
     pendivDiv.appendChild(document.createElement("div")).innerHTML = "N/A"
@@ -138,7 +138,7 @@ document.querySelector("#scroll").innerHTML = tickerText;
     reviewDiv.appendChild(document.createElement("div")).innerHTML = `<p style="font-size: 15px; color: yellow">Hold - Last Update: ${updated}</p>`
     pendivDiv.appendChild(document.createElement("div")).innerHTML = `<p style="font-size: 15px; color: red">More Information Required</p>`
   } 
-}
+
 
 var popover = new bootstrap.Popover(document.querySelector('.example-popover'), {
   container: 'body'

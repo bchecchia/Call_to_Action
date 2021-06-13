@@ -91,11 +91,10 @@ body {
     }
   }
 
-/* * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  } */
+* {
+    margin: 1px;
+    padding: 0px;
+  }
   
   h1 {
     color: #426696;
@@ -200,18 +199,6 @@ body {
     position: relative;
   }
   
-  .pro img {
-    position: absolute;
-    top: -10%;
-    right: 10%;
-  }
-  .pro h2 {
-    width: 40%;
-    color: #5c7385;
-    font-weight: 600;
-  }
-  
-  /* GAMES */
   .status {
     margin-bottom: 3rem;
   }
@@ -228,12 +215,6 @@ body {
     border-radius: 2rem;
   }
   
-  .games {
-    margin: 5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
   
   .card {
     transform-style: preserve-3d;
@@ -300,13 +281,13 @@ body {
         margin-bottom: 15px;
       }
       .form-style-10 h1{
-        background: #687980;
+        background: #6cdbeb;
         padding: 20px 30px 15px 30px;
         margin: -30px -30px 30px -30px;
         border-radius: 10px 10px 0 0;
         -webkit-border-radius: 10px 10px 0 0;
         -moz-border-radius: 10px 10px 0 0;
-        color: #fff;
+        color: #687980;
         text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
         font: normal 30px 'Bitter', serif;
         -moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
@@ -416,13 +397,6 @@ body {
         margin-bottom: 40px;
     }
      
-    /* .login-key {
-        height: 100px;
-        font-size: 80px;
-        line-height: 100px;
-        background: -webkit-linear-gradient(#27EF9F, #0DB8DE);
-        -webkit-text-fill-color: transparent;
-    } */
      
     .login-title {
         margin-top: 15px;
@@ -454,9 +428,9 @@ body {
         margin-bottom: 20px;
         padding-left: 0px;
         color: #ECF0F5;
-    } */
+    } 
      
-    /* input[type=password] {
+    input[type=password] {
         background-color: #1A2226;
         border: none;
         border-bottom: 2px solid #0DB8DE;

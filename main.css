@@ -137,7 +137,7 @@ body {
     );
     border-radius: 2rem;
     z-index: 6;
-    backdrop-filter: blur(2rem);
+    
     display: flex;
   }
   .circle1,

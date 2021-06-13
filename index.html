@@ -157,11 +157,72 @@
           </div>
         </div>
 
-          <header class="header">
 
-          </header>
-    <footer class="p-5 bg-dark text-white text-center position-relative">
-      
+             <div style = padding:30px;>
+              <div class="progress" style="height: 40px;"></div>
+              <div class="progress-bar bg-success" role="progressbar" style="width: 35%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              <a href="#" class="btn btn-primary" data-progress="25">Section-1</a>
+              <a href="#" class="btn btn-primary" data-progress="50">Section-2</a>
+              <a href="#" class="btn btn-primary" data-progress="75">Section-3</a>
+              <a href="#" class="btn btn-primary" data-progress="100">Section-4</a>
+              <a href="#" class="btn btn-primary" data-progress="100">Section-5</a>
+            </div> 
+            <div id="marquee-cont">
+              <table width="100%" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td width="50px" style="background:#1174A8;">
+                    <button id="ticker-title">Posts:</button>
+                  </td>
+                  <td id="marquee">
+                    <marquee onmouseover="this.stop();" onmouseout="this.start();" id='scroll'>
+                    temp <img src="https://www.naishare.com/images/favicon.png" width="25px" />
+                    </marquee>
+                  </td>
+                </tr>
+              </table>
+            </div>
+         
+            
+            <div id="main-overview" class="main-overview">
+              <div>
+                <p style="font-size: 24px; text-align: center;">Issues</p>
+                <div id="issues-card" style="size: auto;">
+                    <p>No Issues</p>
+                </div>
+              </div>
+            </div>
+         
+             <div class="main-cards">
+               <div class="card" id="in-details">Application</div>
+               <div class="card" id="in-review">In review</div>
+               <div class="card" id="in-pending">Pending Action</div>
+             </div>
+             
+           </main>
+         </div>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCyUN-kMaCHyRdBM1cmmx8RlDpoy_TMY54",
+    authDomain: "fafsa-app.firebaseapp.com",
+    projectId: "fafsa-app",
+    storageBucket: "fafsa-app.appspot.com",
+    messagingSenderId: "344924725022",
+    appId: "1:344924725022:web:ab54205686751e7157b30f"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+         <footer class="p-5 bg-dark text-white text-center position-relative">
+
           <div class="container">
             <p class="lead">Copyright &copy; 2021 fake_FAFSA: </p>
             <a href="#" class ="position-absolute bottom-0 end-0 p-5">
@@ -191,6 +252,8 @@
             e.src='https://www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+
+            generateNews()
         </script>
     </body>
 </html>

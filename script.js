@@ -65,33 +65,67 @@ function updateTables(resp) {
   let status = resp.status
   let submitted = resp.submitted
   let updated = resp.updated
+
+  let issues = {}
+  for (const field in resp) {
+    if (resp[field] == "") {
+      issues[field] = "Not Entered"
+    }
+  }
+
+  if (Object.keys(issues).length > 0) {
+    let issuesCard = document.getElementById("issues-card")
+    issuesCard.innerHTML = ""
+
+    for (const field in issues) {
+      let issueDiv = document.createElement("div")
+      issueDiv.style.height = "auto"
+      issueDiv.className = "overviewcard"
+      issueDiv.innerHTML = `Issue: ${field} - ${issues[field]}`
+      issuesCard.appendChild(issueDiv)
+    }
+  }
   
-  if (status == "SUBMITTED") {
+  if (Object.keys(issues).length > 0 ) { 
     progressDiv.appendChild(document.createElement("div")).innerHTML = `<p style="font-size: 15px; color: green">Submitted on ${submitted}</p>`
     reviewDiv.appendChild(document.createElement("div")).innerHTML = "N/A"
-    pendivDiv.appendChild(document.createElement("div")).innerHTML = "N/A"
-
-
-
-
-//array of news
-const news = ["Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-"Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-"Contrary to popular belief, Lorem Ipsum is not simply random text.",
-"The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.",
-"All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary."]
-
-//logo
-const logo = "<img src='https://www.naishare.com/images/favicon.png' width='25px' style='margin:0 8px'/>";
-let tickerText = "";
-//looping through the news array
-for(let i=0; i<news.length; i++){
-  tickerText+=news[i];
-  //adds the logo in between news items
-  if(i!=news.length-1){
-    tickerText+=logo;
+    pendivDiv.appendChild(document.createElement("div")).innerHTML = `<p style="color: red">Issues must be resolved before review</p>`
+  } else {
+    if (status == "SUBMITTED") {
+      progressDiv.appendChild(document.createElement("div")).innerHTML = `<p style="font-size: 15px; color: green">Submitted on ${submitted}</p>`
+      reviewDiv.appendChild(document.createElement("div")).innerHTML = "N/A"
+      pendivDiv.appendChild(document.createElement("div")).innerHTML = "N/A"
+    } else if (status == "REVIEW") {
+      progressDiv.appendChild(document.createElement("div")).innerHTML = `<p style="font-size: 15px; color: green">Submitted on ${submitted}</p>`
+      reviewDiv.appendChild(document.createElement("div")).innerHTML = `<p style="font-size: 15px; color: green">In Progress - Last Update: ${updated}</p>`
+      pendivDiv.appendChild(document.createElement("div")).innerHTML = "N/A"
+    } else if (status == "MORE_INFO") {
+      progressDiv.appendChild(document.createElement("div")).innerHTML = `<p style="font-size: 15px; color: green">Submitted on ${submitted}</p>`
+      reviewDiv.appendChild(document.createElement("div")).innerHTML = `<p style="font-size: 15px; color: yellow">Hold - Last Update: ${updated}</p>`
+      pendivDiv.appendChild(document.createElement("div")).innerHTML = `<p style="font-size: 15px; color: red">More Information Required</p>`
+    } 
   }
 }
+
+
+function generateNews() {
+  //array of news
+  const news = ["Applicants can now check status of their application through the dashboard",
+  "Portal will be unavailable on 7/12/2020 for maintenance",
+  "Due to high demand we approximate review time for applications is 3 business days"]
+
+  //logo
+  const logo = "<img src='https://www.naishare.com/images/favicon.png' width='25px' style='margin:0 8px'/>";
+  let tickerText = "";
+  //looping through the news array
+  for(let i=0; i<news.length; i++){
+    tickerText+=news[i];
+    //adds the logo in between news items
+    if(i!=news.length-1){
+      tickerText+=logo;
+    }
+  }
+
 
 document.querySelector("#scroll").innerHTML = tickerText;
 
@@ -126,3 +160,4 @@ function toggle_light_mode() {
   app.setAttribute("light-mode", "dark");
     }		
 }
+

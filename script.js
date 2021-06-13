@@ -114,3 +114,15 @@ var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggl
 var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
   return new bootstrap.Popover(popoverTriggerEl)
 })
+
+
+function toggle_light_mode() {
+    var app = document.getElementsByTagName("BODY")[0];
+    if (localStorage.lightMode == "dark") {
+  localStorage.lightMode = "light";
+  app.setAttribute("light-mode", "light");
+    } else {
+  localStorage.lightMode = "dark";
+  app.setAttribute("light-mode", "dark");
+    }		
+}

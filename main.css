@@ -6,19 +6,23 @@ body {
     text-align:center;
     width: 100%;
     background-color: #c8c8fae8;
+    perspective: 1000px;
+    align-items: center;
+  justify-content: center;
     }
 
     
-  .grid-container {
-    width: 80%;
+ .grid-container {
+    width: 60%;
     margin: 0 auto;
     background: linear-gradient(to top,#999999,#b8b4b4,#fffefe,#f2f5f1,#ffffff);
     padding: 10px 10px;
-    /* border: solid 5px black; */
-    margin-top: 40px;
-    margin-bottom: 40px;
+
+     margin-top: 40px;
+    margin-bottom: 30px;
     border-radius: 15px;
-  }
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  } 
   
 
   .header {
@@ -27,16 +31,6 @@ body {
     justify-content: space-around;
     padding: 0 10px;
     margin-top: 60px;
-    
-  }
-
-  .main {
-    grid-area: main;
-    background-color:#5c7385;
-    border-color:#5c7385;
-    border: solid 2px;
-    border-radius: 25px;
-    padding: 10px;
     
   }
 
@@ -90,7 +84,7 @@ body {
   }
 
    /* Medium screens breakpoint (1050px) */
-   @media only screen and (min-width: 65.625em) {
+   @media only screen and (min-width: 75.625em) {
     /* Break out main cards into two columns */
     .main-cards {
       column-count: 2;
@@ -182,6 +176,7 @@ body {
       rgba(255, 255, 255, 0.3)
     );
     border-radius: 15rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   }
   .link {
     display: flex;
@@ -241,6 +236,7 @@ body {
   }
   
   .card {
+    transform-style: preserve-3d;
     display: flex;
     background: linear-gradient(
       to left top,
@@ -293,7 +289,7 @@ body {
         border-radius: 10px;
         -webkit-border-radius:10px;
         -moz-border-radius: 10px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
         -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
         -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
       }
@@ -404,3 +400,208 @@ body {
         margin-top: 10px;
         text-align: right;
       }
+
+      body {
+        background: #222D32;
+        font-family: 'Roboto', sans-serif;
+    }
+     
+    .login-box {
+        margin-top: 75px;
+        height: auto;
+        background: #ffffff;
+        text-align: center;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        border-radius: 25px;
+        margin-bottom: 40px;
+    }
+     
+    /* .login-key {
+        height: 100px;
+        font-size: 80px;
+        line-height: 100px;
+        background: -webkit-linear-gradient(#27EF9F, #0DB8DE);
+        -webkit-text-fill-color: transparent;
+    } */
+     
+    .login-title {
+        margin-top: 15px;
+        text-align: center;
+        font-size: 30px;
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+        font-weight: bold;
+        color: #030303;
+        
+    }
+     
+    .login-form {
+      
+        margin-top: 25px;
+        margin-bottom: 25px;
+        text-align: left;
+        
+    }
+     
+    /* input[type=text] {
+        background-color: #1A2226;
+        border: none;
+        border-bottom: 2px solid #0DB8DE;
+        border-top: 0px;
+        border-radius: 0px;
+        font-weight: bold;
+        outline: 0;
+        margin-bottom: 20px;
+        padding-left: 0px;
+        color: #ECF0F5;
+    } */
+     
+    /* input[type=password] {
+        background-color: #1A2226;
+        border: none;
+        border-bottom: 2px solid #0DB8DE;
+        border-top: 0px;
+        border-radius: 0px;
+        font-weight: bold;
+        outline: 0;
+        padding-left: 0px;
+        margin-bottom: 20px;
+        color: #ECF0F5;
+    } */
+     
+    .form-group {
+        margin-bottom: 40px;
+        outline: 0px;
+        
+    }
+     
+    .form-control:focus {
+      
+        border-color: inherit;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border-bottom: 2px solid #0DB8DE;
+        outline: 0;
+        background-color: #1A2226;
+        color: #ECF0F5;
+        margin-bottom: 40px;
+        
+    }
+     
+    input:focus {
+        outline: none;
+        box-shadow: 0 0 0;
+    }
+     
+    label {
+        margin-bottom: 0px;
+    }
+     
+    .form-control-label {
+        font-size: 30px;
+        color: #6C6C6C;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+     
+    .btn-outline-primary {
+        border-color: #000000;
+        color: #020202;
+        border-radius: 0px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+     
+    .btn-outline-primary:hover {
+        background-color: #0DB8DE;
+        right: 0px;
+    }
+     
+    .login-btm {
+        float: left;
+    }
+     
+    .login-button {
+        padding-right: 0px;
+        text-align: right;
+        margin-bottom: 25px;
+    }
+     
+    .login-text {
+      font-size: 30px;
+        text-align: left;
+        padding-left: 0px;
+        color: #A2A4A4;
+    }
+     
+    .loginbttm {
+      font-size: 30px;
+        padding: 0px;
+    }
+
+
+     /* Light Mode Button Styles
+        --------------------------- */ 
+
+        .light-mode-button {
+          background:0;
+          border: 0;
+          box-sizing: border-box;
+          cursor: pointer;
+          height: 40px;
+          width: 100px;
+          position: relative;
+          border: 1px solid rgba(255,255,255,0);
+      }
+
+      .light-mode-button:focus {
+          outline:none; /* Not ideal for accessibility */
+      }
+
+      .light-mode-button span:nth-child(1) {
+          position: absolute;
+          top:0;
+          left:0;
+          width: 100px;
+          height:40px;
+          border-radius: 20px;
+          background-color: #d6d7db;
+          box-shadow: inset 1px 1px 3px 0 rgb(0 0 0 / 40%);
+          transition: .3s;
+      }
+
+      .light-mode-button span:nth-child(2) {
+          position: absolute;
+          top:5px;
+          left:5px;
+          width: 30px;
+          height: 30px;
+          background-color: #fff;
+          border-radius: 50%;
+          box-shadow: 1px 1px 2px 0 rgb(0 0 0 / 40%);
+          transition: .3s;
+      }
+
+      /* Light & Dark Mode Styles
+--------------------------- */ 
+
+body {
+  background-color: #c8c8fae8;
+  transition: background-color .3s;
+}
+
+body[light-mode=dark] {
+  background-color: #141516;
+  color: #ced4e2;
+}
+
+body[light-mode="dark"] .light-mode-button span:nth-child(1){
+  background-color: #ced4e2;
+  color: #141516;
+}
+
+body[light-mode=dark] .light-mode-button span:nth-child(2) {
+  left: 65px;
+  background-color: #141516;
+}

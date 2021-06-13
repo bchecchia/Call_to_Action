@@ -5,7 +5,7 @@ body {
     box-sizing: border-box;
     text-align:center;
     width: 100%;
-    background-color: #e6e6fae8;
+    background-color: #c8c8fae8;
     }
 
     
@@ -14,7 +14,7 @@ body {
     margin: 0 auto;
     background: linear-gradient(to top,#999999,#b8b4b4,#fffefe,#f2f5f1,#ffffff);
     padding: 10px 10px;
-    border: solid 5px black;
+    /* border: solid 5px black; */
     margin-top: 40px;
     margin-bottom: 40px;
     border-radius: 15px;
@@ -154,19 +154,19 @@ body {
       rgba(255, 255, 255, 0.8),
       rgba(255, 255, 255, 0.3)
     );
-    height: 20rem;
-    width: 20rem;
+    height: 15rem;
+    width: 15rem;
     position: absolute;
     border-radius: 50%;
   }
   
   .circle1 {
-    top: 35%;
-    right: -5%;
+    top: 45%;
+    right: 10%;
   }
   .circle2 {
-    bottom: -15%;
-    left: -10%;
+    bottom: 10%;
+    left: 10%;
   }
   .dashboard {
     color: #5c7385;
@@ -286,7 +286,7 @@ body {
     /* FORM */
 
     .form-style-10{
-        /* width:550px; */
+        width:550px;
         padding:30px;
         margin:40px auto;
         background: #FFF;
@@ -321,11 +321,11 @@ body {
       .form-style-10 h1 > span{
         display: block;
         margin-top: 2px;
-        font: 13px Arial, Helvetica, sans-serif;
+        font: 32px Arial, Helvetica, sans-serif;
       }
       .form-style-10 label{
         display: block;
-        font: 13px Arial, Helvetica, sans-serif;
+        font: 22px Arial, Helvetica, sans-serif;
         color: #888;
         margin-bottom: 15px;
       }
@@ -356,7 +356,7 @@ body {
       }
       
       .form-style-10 .section{
-        font: normal 20px 'Bitter', serif;
+        font: normal 35px 'Bitter', serif;
         color: #2A88AD;
         margin-bottom: 5px;
       }
@@ -368,7 +368,7 @@ body {
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         border: 4px solid #fff;
-        font-size: 14px;
+        font-size: 20px;
         margin-left: -45px;
         color: #fff;
         margin-top: -3px;
@@ -387,7 +387,7 @@ body {
         -webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
         box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
         border: 1px solid #257C9E;
-        font-size: 15px;
+        font-size: 20px;
       }
       .form-style-10 input[type="button"]:hover, 
       .form-style-10 input[type="submit"]:hover{
@@ -399,7 +399,7 @@ body {
       .form-style-10 .privacy-policy{
         float: right;
         width: 250px;
-        font: 12px Arial, Helvetica, sans-serif;
+        font: 14px Arial, Helvetica, sans-serif;
         color: #4D4D4D;
         margin-top: 10px;
         text-align: right;

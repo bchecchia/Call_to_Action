@@ -47,20 +47,20 @@
               <cmn-search class="searchBar" _nghost-c3="">
                   <div _ngcontent-c3="" class="form-group has-feedback has-feedback-left" id="titleSearch">
                       <div _ngcontent-c3="">
-                          <a _ngcontent-c3="" href="https://studentaid.gov/apply-for-aid/fafsa/filling-out/help"><span _ngcontent-c3="">Search FAFSA Help</span></a>
+                          <a _ngcontent-c3="" href="https://studentaid.gov/apply-for-aid/fafsa/filling-out/help"><i class="bi bi-info-circle-fill"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+                            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+                          </svg></i></a>
                       </div>
                   </div>
               </cmn-search>
           </div>
   </div>
   </header>
-      <header class="header">
 
-</header>
-      <!-- <div class="container"> -->
+
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
           <div class="container">
-            <a href="/" class=" text-light text-decoration-none"><h3>FAFSA_Dash</h3></a>
+            <a href="/" class=" text-light text-decoration-none display-5">FAFSA_Dash</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
 
@@ -70,9 +70,9 @@
 
             <div class="collapse navbar-collapse" id="navmenu">
               <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a href="index.html" class="nav-link  link-light">Dash</a></li>
-                <li class="nav-item"><a href="form.html" class="nav-link  link-light">Form</a></li>
-                <li class="nav-item"><a href="login.html" class="nav-link  link-light">Login</a></li>
+                <li class="nav-item"><a href="index.html" class="nav-link  link-light display-6">Dash</a></li>
+                <li class="nav-item"><a href="form.html" class="nav-link  link-light display-6">Form</a></li>
+                <li class="nav-item"><a href="login.html" class="nav-link  link-light display-6">Login</a></li>
 
               </ul>
             </div>
@@ -81,37 +81,89 @@
         </nav>
         </header>
 
+        <header class="header">
+
+        </header>
+
+        <section class="glass">
+        <div class="container-fluid">
+          
+         
+            <div class="dashboard">
+              <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-2"></div>
+                    <div class="col-lg-6 col-md-8 login-box">
+ 
+                        <div class="col-lg-12 login-title">
+                            Student Login
+                        </div>
+         
+                        <div class="col-lg-12 login-form">
+                            <div class="col-lg-12 login-form">
+                                <form>
+                                    <div class="form-group">
+                                        <label class="form-control-label">Email</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-control-label">Password</label>
+                                        <input type="password" class="form-control" i>
+                                    </div>
+         
+                                    <div class="col-lg-12 loginbttm">
+                                        <div class="col-lg-6 login-btm login-text">
+                                            <!-- Error Message -->
+                                        </div>
+                                        <div class="col-lg-6 login-btm login-button">
+                                            <button type="submit" class="btn btn-outline-primary" value="Login"  id="submit" onClick="login()">Login</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-2"></div>
+                    </div>
+                </div>
+
+            </div>
 
  
-    <div class = grid-container>
-        <main class ="main">
-            <div class="border-box">
-                <h2 style = "color: white;" >Please Login</h2>
-                <label for="uname" id="un">Email:</label>
-                <input type="text" name="user" placeholder="Enter Email" id="uname"><br/>
-                
-                <label for="upass" id="ps">Password:</label>
-                <input type="password" name="pass" placeholder="Enter Password" id="upass"><br/>
-                
-                <button type="submit" value="Login"  id="submit" onClick="login()">Login</button>
-                
-                
-            </div>
         </main>
+
+        </div>
     </div>
 
+
+      
+
+    </section>
+    <header class="header">
+
+    </header>
     <footer class="p-5 bg-dark text-white text-center position-relative">
       <div class="container">
         <p class="lead">Copyright &copy; 2021 fake_FAFSA: </p>
         <a href="#" class ="position-absolute bottom-0 end-0 p-5">
-          <i class="bi bi-arrow-up-circle h1"></i>
+          <i class="bi bi-arrow-up-circle h1"><svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" fill="currentColor" class="bi bi-arrow-up-square-fill" viewBox="0 0 16 16">
+            <path d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0z"/>
+          </svg></i>
         </a>
+
       </div>
+      <div class="container"style="float:right">
+        <button 
+            class="light-mode-button" 
+            aria-label="Toggle Light Mode" 
+            onclick="toggle_light_mode()">
+            <span></span>
+            <span></span>
+        </button> 
+          </div>
     </footer>
 
 
-        </body>
-        </html>
+    
    
           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

@@ -126,6 +126,38 @@ function generateNews() {
     }
   }
 
-  let scrollBar = document.querySelector("#scroll")
-  scrollBar.innerHTML = tickerText
+
+document.querySelector("#scroll").innerHTML = tickerText;
+
+  } else if (status == "REVIEW") {
+    progressDiv.appendChild(document.createElement("div")).innerHTML = `<p style="font-size: 15px; color: green">Submitted on ${submitted}</p>`
+    reviewDiv.appendChild(document.createElement("div")).innerHTML = `<p style="font-size: 15px; color: green">In Progress - Last Update: ${updated}</p>`
+    pendivDiv.appendChild(document.createElement("div")).innerHTML = "N/A"
+  } else if (status == "MORE_INFO") {
+    progressDiv.appendChild(document.createElement("div")).innerHTML = `<p style="font-size: 15px; color: green">Submitted on ${submitted}</p>`
+    reviewDiv.appendChild(document.createElement("div")).innerHTML = `<p style="font-size: 15px; color: yellow">Hold - Last Update: ${updated}</p>`
+    pendivDiv.appendChild(document.createElement("div")).innerHTML = `<p style="font-size: 15px; color: red">More Information Required</p>`
+  } 
 }
+
+var popover = new bootstrap.Popover(document.querySelector('.example-popover'), {
+  container: 'body'
+})
+
+var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+  return new bootstrap.Popover(popoverTriggerEl)
+})
+
+
+function toggle_light_mode() {
+    var app = document.getElementsByTagName("BODY")[0];
+    if (localStorage.lightMode == "dark") {
+  localStorage.lightMode = "light";
+  app.setAttribute("light-mode", "light");
+    } else {
+  localStorage.lightMode = "dark";
+  app.setAttribute("light-mode", "dark");
+    }		
+}
+

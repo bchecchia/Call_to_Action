@@ -88,17 +88,17 @@ function updateTables(resp) {
   
   if (Object.keys(issues).length > 0 ) { 
     progressDiv.appendChild(document.createElement("div")).innerHTML = `<p style="font-size: 15px; color: green">Submitted on ${submitted}</p>`
-    reviewDiv.appendChild(document.createElement("div")).innerHTML = "N/A"
+    reviewDiv.appendChild(document.createElement("div")).innerHTML = "No Action Required"
     pendivDiv.appendChild(document.createElement("div")).innerHTML = `<p style="color: red">Issues must be resolved before review</p>`
   } else {
     if (status == "SUBMITTED") {
       progressDiv.appendChild(document.createElement("div")).innerHTML = `<p style="font-size: 15px; color: green">Submitted on ${submitted}</p>`
-      reviewDiv.appendChild(document.createElement("div")).innerHTML = "N/A"
-      pendivDiv.appendChild(document.createElement("div")).innerHTML = "N/A"
+      reviewDiv.appendChild(document.createElement("div")).innerHTML = "No Action Required"
+      pendivDiv.appendChild(document.createElement("div")).innerHTML = "No Action Required"
     } else if (status == "REVIEW") {
       progressDiv.appendChild(document.createElement("div")).innerHTML = `<p style="font-size: 15px; color: green">Submitted on ${submitted}</p>`
       reviewDiv.appendChild(document.createElement("div")).innerHTML = `<p style="font-size: 15px; color: green">In Progress - Last Update: ${updated}</p>`
-      pendivDiv.appendChild(document.createElement("div")).innerHTML = "N/A"
+      pendivDiv.appendChild(document.createElement("div")).innerHTML = "No Action Required"
     } else if (status == "MORE_INFO") {
       progressDiv.appendChild(document.createElement("div")).innerHTML = `<p style="font-size: 15px; color: green">Submitted on ${submitted}</p>`
       reviewDiv.appendChild(document.createElement("div")).innerHTML = `<p style="font-size: 15px; color: yellow">Hold - Last Update: ${updated}</p>`
